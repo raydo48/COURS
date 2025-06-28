@@ -243,27 +243,57 @@
             font-size: 1.1rem;
         }
         
-        /* Pricing Section */
-        .pricing-section {
-            margin-bottom: 70px;
-            animation: fadeInUp 1s ease-out 0.4s both;
-            text-align: center;
-        }
-        
-        .-container {
+        /* تحسينات قسم التسعير */
+        .price-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            margin: 20px 0;
+            gap: 20px;
             flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .price-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), transparent);
+            z-index: -1;
         }
         
         .old-price {
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-decoration: line-through;
             color: var(--secondary);
             opacity: 0.7;
+            position: relative;
+        }
+        
+        .old-price::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: translateY(-50%);
         }
         
         .price {
@@ -271,30 +301,35 @@
             font-weight: 900;
             color: #34c759;
             text-shadow: 0 0 15px rgba(52, 199, 89, 0.6);
-            margin: 20px 0;
             position: relative;
             animation: pulse-green 2s infinite;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
         
         .price span {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--gray);
+            margin-top: 5px;
         }
         
         .discount-tag {
-            background: #34c759;
+            background: linear-gradient(135deg, #34c759, #2daa4f);
             color: white;
-            padding: 5px 20px;
+            padding: 8px 25px;
             border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.5rem;
+            font-weight: 900;
+            font-size: 1.4rem;
             margin-top: 10px;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(52, 199, 89, 0.4);
+            box-shadow: 0 5px 15px rgba(52, 199, 89, 0.4);
+            transform: rotate(-3deg);
+            animation: float 3s infinite ease-in-out;
         }
         
         .pitch-text {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             max-width: 800px;
             margin: 30px auto;
             padding: 20px;
@@ -302,7 +337,10 @@
             border-radius: 15px;
             border-left: 5px solid var(--success);
             line-height: 1.8;
+            position: relative;
         }
+        
+        
         
         .features {
             list-style: none;
@@ -607,7 +645,7 @@
             }
         }
         
-        /* Responsive */
+        /* تحسينات للجوال */
         @media (max-width: 992px) {
             .features-grid {
                 grid-template-columns: 1fr 1fr;
@@ -628,15 +666,20 @@
             }
             
             .price {
-                font-size: 3.5rem;
+                font-size: 2.8rem;
             }
             
             .old-price {
-                font-size: 2rem;
+                font-size: 1.6rem;
+            }
+            
+            .discount-tag {
+                font-size: 1.3rem;
+                padding: 7px 20px;
             }
             
             .pitch-text {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
             
             .contact-info {
@@ -658,6 +701,12 @@
             .whatsapp-section p {
                 font-size: 1.2rem;
             }
+            
+            .price-wrapper {
+                flex-direction: column;
+                gap: 5px;
+                padding: 20px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -678,7 +727,12 @@
             }
             
             .old-price {
-                font-size: 5rem;
+                font-size: 1.4rem;
+            }
+            
+            .discount-tag {
+                font-size: 1.2rem;
+                padding: 6px 15px;
             }
             
             .contact-info {
@@ -717,7 +771,7 @@
             }
             
             .pitch-text {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             
             .whatsapp-section h3 {
@@ -903,38 +957,35 @@
                 </div>
             </div>
         </section>
-
-<section class="pricing-section">
-            <div class="section-title">
-                <h2>سعر الدورة</h2>
-                <p>استثمر في نفسك واحصل على كل هذه المميزات بسعر خاص</p>
-            </div>
-            
-            <div class="price-container">
+    
+    <section class="pricing-section">
+        <div class="section-title">
+            <h2>سعر الدورة</h2>
+        </div>
+        
+        <div class="price-container">
+            <div class="price-wrapper">
                 <div class="price">$24.99</div>
                 <div class="old-price">$50</div>
-                
             </div>
-            
-            <div class="discount-tag">وفر 50% الآن!</div>
-            
-            <div class="pitch-text">
-                <i class="fas fa-bolt" style="color: #34c759;"></i> 
-                هذه ليست مجرد دورة، بل هي استثمار في مستقبلك المهني. احجز الآن قبل انتهاء العرض!
-            </div>
-            
-            <a href="https://wa.me/+213549387060" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> سجل الآن عبر واتساب
-            </a>
-        </section>
-
+        </div>
         
-        <footer>
+        <div class="pitch-text">
+            <i class="fas fa-bolt" style="color: #34c759; margin-left: 10px;"></i> 
+            هذه ليست مجرد دورة، بل هي استثمار في مستقبلك المهني. احجز الآن قبل انتهاء العرض!
+        </div>
+        
+        <a href="https://wa.me/+213549387060" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> سجل الآن عبر واتساب
+        </a>
+    </section>
+    
+    <footer>
             <p>© 2025 دورة احترف ريلزات باسلوب Apple UI. جميع الحقوق محفوظة raydo.</p>
 
         </footer>
     </div>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Animations for elements on scroll
