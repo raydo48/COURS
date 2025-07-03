@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دورة احترافية في ستايل Apple ui </title>
+    <title>دورة احترافية في ستايل Apple UI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -163,13 +163,13 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
         
-        /* فيديو الدورة */
+        /* تحسينات قسم الفيديو */
         .video-section {
-            margin: 60px auto;
-            max-width: 1000px;
-            border-radius: 25px;
+            margin: 40px auto;
+            max-width: 95%; 
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             position: relative;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
@@ -202,7 +202,7 @@
             align-items: center;
             text-align: center;
             color: white;
-            padding: 20px;
+            padding: 15px;
             opacity: 1;
             transition: opacity 0.3s ease;
             z-index: 2;
@@ -214,28 +214,29 @@
         }
         
         .video-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 900;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         
         .video-subtitle {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin-bottom: 30px;
-            line-height: 1.7;
+            font-size: 1.1rem;
+            max-width: 100%;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            padding: 0 10px;
         }
         
         .play-button {
             background: var(--primary);
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(20, 126, 251, 0.5);
@@ -330,19 +331,17 @@
         
         /* قسم التحذير المهم */
         .warning-section {
-    background: linear-gradient(135deg, #ff3b30, #d70015);
-    border-radius: 25px;
-    padding: 40px;
-    margin: 60px auto;
-    text-align: center;
-    box-shadow: 0 15px 50px rgba(255, 59, 48, 0.4);
-    position: relative;
-    overflow: hidden;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    
-    max-width: 900px;
-}
-
+            background: linear-gradient(135deg, #ff3b30, #d70015);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 60px auto;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(255, 59, 48, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            max-width: 900px;
+        }
         
         .warning-section::before {
             content: "";
@@ -374,7 +373,6 @@
         }
         
         .warning-content {
-            
             font-size: 1.8rem;
             font-weight: 700;
             line-height: 1.8;
@@ -399,15 +397,13 @@
             z-index: -1;
         }
         
-       .warning-highlight {
-    color: #ffcc00;
-    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-    font-weight: 900;
-    font-size: 2.2rem;
-    animation: glow 2s infinite alternate;
-    /* display: block;  احذفها أو بدلها بـ inline */
-}
-
+        .warning-highlight {
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            font-weight: 900;
+            font-size: 2.2rem;
+            animation: glow 2s infinite alternate;
+        }
         
         /* تحسينات قسم التسعير */
         .price-container {
@@ -505,8 +501,6 @@
             line-height: 1.8;
             position: relative;
         }
-        
-        
         
         .features {
             list-style: none;
@@ -835,7 +829,7 @@
             }
             
             .video-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .video-subtitle {
@@ -852,6 +846,12 @@
             
             .warning-highlight {
                 font-size: 1.8rem;
+            }
+            
+            .play-button {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
             }
         }
         
@@ -922,6 +922,25 @@
             
             .warning-highlight {
                 font-size: 1.5rem;
+            }
+            
+            .video-title {
+                font-size: 1.6rem;
+            }
+            
+            .video-subtitle {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .play-button {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+            
+            .video-overlay {
+                padding: 10px;
             }
         }
         
@@ -999,13 +1018,23 @@
             }
             
             .video-title {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+            
+            .video-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
             }
             
             .play-button {
-                width: 80px;
-                height: 80px;
-                font-size: 2.5rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .video-section {
+                border-radius: 15px;
             }
             
             .warning-title {
@@ -1214,40 +1243,39 @@
         </section>
         
         <!-- قسم التحذير المهم -->
-<section class="warning-section">
-    <div class="warning-title">
-        <i class="fas fa-exclamation-triangle"></i>
-        تحذير مهم جداً
-    </div>
-    <div class="warning-content">
-        <span class="warning-highlight">احذر!</span> <br> بعد أول مقطع من الدورة راح يجيك مرض اسمه <span class="warning-highlight">"الإبداع"</span>، وأوعدك أنك بعد أول مقطع بس راح تتعلم أشياء ما قد تعلمتها! أنا مراح أوريك tutorials تتفرجها زي أي دورة بعدين يوم تبي تسوي مقطع لحالك ماتقدر ، بل بعلمك الطريقة من الصفر كيف تسويها لحالك وأسرار هذا الستايل راح تصير تقدر تطبقها على أي ستايل يعجبك وتصير تسوي المشاهد بنفسك بدون ما تضيع وقتك في <span class="warning-highlight">tutorials</span> فاذا كنت مستعد تتقبل مرض الابداع حياك الله في الدورة !
-    </div>
-</section>
-
-    
-    <section class="pricing-section">
-        <div class="section-title">
-            <h2>سعر الدورة</h2>
-        </div>
-        
-        <div class="price-container">
-            <div class="price-wrapper">
-                <div class="price">$24.99</div>
-                <div class="old-price">$50</div>
+        <section class="warning-section">
+            <div class="warning-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                تحذير مهم جداً
             </div>
-        </div>
-        
-        <div class="pitch-text">
-            <i class="fas fa-bolt" style="color: #34c759; margin-left: 10px;"></i> 
-            هذه ليست مجرد دورة، بل هي استثمار في مستقبلك المهني. احجز مكانك الآن قبل انتهاء التخفيض!
-        </div>
-        
-        <a href="https://wa.me/+213549387060" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> سجل الآن عبر واتساب
-        </a>
-    </section>
+            <div class="warning-content">
+                <span class="warning-highlight">احذر!</span> <br> بعد أول مقطع من الدورة راح يجيك مرض اسمه <span class="warning-highlight">"الإبداع"</span>، وأوعدك أنك بعد أول مقطع بس راح تتعلم أشياء ما قد تعلمتها! أنا مراح أوريك tutorials تتفرجها زي أي دورة بعدين يوم تبي تسوي مقطع لحالك ماتقدر ، بل بعلمك الطريقة من الصفر كيف تسويها لحالك وأسرار هذا الستايل راح تصير تقدر تطبقها على أي ستايل يعجبك وتصير تسوي المشاهد بنفسك بدون ما تضيع وقتك في <span class="warning-highlight">tutorials</span> فاذا كنت مستعد تتقبل مرض الابداع حياك الله في الدورة !
+            </div>
+        </section>
     
-    <footer>
+        <section class="pricing-section">
+            <div class="section-title">
+                <h2>سعر الدورة</h2>
+            </div>
+            
+            <div class="price-container">
+                <div class="price-wrapper">
+                    <div class="price">$24.99</div>
+                    <div class="old-price">$50</div>
+                </div>
+            </div>
+            
+            <div class="pitch-text">
+                <i class="fas fa-bolt" style="color: #34c759; margin-left: 10px;"></i> 
+                هذه ليست مجرد دورة، بل هي استثمار في مستقبلك المهني. احجز مكانك الآن قبل انتهاء التخفيض!
+            </div>
+            
+            <a href="https://wa.me/+213549387060" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> سجل الآن عبر واتساب
+            </a>
+        </section>
+        
+        <footer>
             <p>© 2025 دورة احترف ريلزات باسلوب Apple UI. جميع الحقوق محفوظة raydo.</p>
         </footer>
     </div>
@@ -1295,32 +1323,6 @@
                 });
             });
             
-            // Generate floating Apple icons
-            const appleIconsContainer = document.querySelector('.apple-icons');
-            const icons = ['fab fa-apple', 'fas fa-mobile-alt', 'fas fa-paint-brush', 
-                           'fas fa-music', 'fas fa-video', 'fas fa-desktop',
-                           'fas fa-play-circle', 'fas fa-bolt', 'fas fa-gem',
-                           'fas fa-layer-group', 'fas fa-wave-square', 'fas fa-star'];
-            
-            for (let i = 0; i < 15; i++) {
-                const icon = document.createElement('div');
-                icon.className = 'apple-icon';
-                icon.innerHTML = `<i class="${icons[Math.floor(Math.random() * icons.length)]}"></i>`;
-                
-                // Random position
-                const top = Math.floor(Math.random() * 90);
-                const left = Math.floor(Math.random() * 90);
-                const size = 3 + Math.floor(Math.random() * 4);
-                const delay = Math.floor(Math.random() * 10);
-                
-                icon.style.top = `${top}%`;
-                icon.style.left = `${left}%`;
-                icon.style.fontSize = `${size}rem`;
-                icon.style.animationDelay = `${delay}s`;
-                
-                appleIconsContainer.appendChild(icon);
-            }
-            
             // Video Play Functionality
             const videoOverlay = document.querySelector('.video-overlay');
             const playButton = document.querySelector('.play-button');
@@ -1331,6 +1333,10 @@
                 const videoId = 'dQw4w9WgXcQ';
                 video.src = `https://www.youtube.com/embed/bmor2Ng6zPw`;
                 videoOverlay.classList.add('hidden');
+                
+                // إضافة خاصية التشغيل التلقائي للجوال
+                video.setAttribute('allow', 'autoplay');
+                video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
             });
         });
     </script>
